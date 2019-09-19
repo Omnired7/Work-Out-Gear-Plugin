@@ -337,6 +337,16 @@ Version: 1.0
             'settings' => 'pg_send_pic_link_fourth',
             'type'     => 'text',
         ));
+        //Custom Settings / Site Identity / Footer Img
+        $wp_customize->add_setting('pg_footer_img', array(
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'pg_footer_img', array(
+            'label' => __( 'Footer Background', 'Phoenix Gear' ),
+            'section' => 'title_tagline',
+            'mime_type' => 'image',
+            'priority' => 200
+        )));
         //Custom Section / Quick Sale Customizations
         $wp_customize->add_section('pg_quick_sale_section', array(
             'title' => __('Quick Sale Options'),
