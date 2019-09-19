@@ -40,13 +40,13 @@ Version: 1.0
             'section' => 'static_front_page',
             'mime_type' => 'image',
           ) ) );
-        //Custom Setting / Mens Image
+        //Custom Setting / Quick Sale / Men
         $wp_customize->add_setting('pg_mens_bg_img', array(
             'type' => 'theme_mod'
         ));
         $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'pg_mens_bg_img', array(
             'label' => __( 'Mens Image', 'Phoenix Gear' ),
-            'section' => 'short_code_options',
+            'section' => 'pg_quick_sale_section',
             'mime_type' => 'image',
         ) ) );
         $wp_customize->add_setting('pg_men_bg_txt_area', array(
@@ -54,7 +54,7 @@ Version: 1.0
         ));
         $wp_customize->add_control('pg_men_bg_txt_area', array(
                 'label'    => __( 'Mens Image Message', 'Phoenix Gear' ),
-                'section'  => 'short_code_options',
+                'section'  => 'pg_quick_sale_section',
                 'settings' => 'pg_men_bg_txt_area',
                 'type'     => 'textarea',
         ));
@@ -64,17 +64,17 @@ Version: 1.0
         ));
         $wp_customize->add_control('pg_mens_bg_link', array(
             'label'    => __( 'Custom Mens Image Link', 'Phoenix Gear' ),
-            'section'  => 'short_code_options',
+            'section'  => 'pg_quick_sale_section',
             'settings' => 'pg_mens_bg_link',
             'type'     => 'text',
         ));
-        //Custom Setting / Womans Image
+        //Custom Setting / Quick Sale / Women
         $wp_customize->add_setting('pg_womens_bg_img', array(
             'type' => 'theme_mod'
         ));
         $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'pg_womens_bg_img', array(
             'label' => __( 'womens Image', 'Phoenix Gear' ),
-            'section' => 'short_code_options',
+            'section' => 'pg_quick_sale_section',
             'mime_type' => 'image'
         )));
         $wp_customize->add_setting('pg_women_bg_txt_area', array(
@@ -82,7 +82,7 @@ Version: 1.0
         ));
         $wp_customize->add_control('pg_women_bg_txt_area', array(
                 'label'    => __( 'Womens Image Message', 'Phoenix Gear' ),
-                'section'  => 'short_code_options',
+                'section'  => 'pg_quick_sale_section',
                 'settings' => 'pg_women_bg_txt_area',
                 'type'     => 'textarea',
         ));
@@ -91,27 +91,26 @@ Version: 1.0
             'sanitize_callback'=> 'esc_url_raw'
         ));
         $wp_customize->add_control('pg_womens_bg_link', array(
-            'label'    => __( 'Custom Womens Image Link', 'Phoenix Gear' ),
-            'section'  => 'short_code_options',
+            'label'    => __( 'Womens Image Link', 'Phoenix Gear' ),
+            'section'  => 'pg_quick_sale_section',
             'settings' => 'pg_womens_bg_link',
             'type'     => 'text',
         ));
-        //Custom Setting / Custom Image
+        //Custom Setting / Quick Sale / Custom
         $wp_customize->add_setting('pg_custom_bg_img', array(
             'type' => 'theme_mod'
         ));
         $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'pg_custom_bg_img', array(
             'label' => __( 'Custom Image', 'Phoenix Gear' ),
-            'section' => 'short_code_options',
+            'section' => 'pg_quick_sale_section',
             'mime_type' => 'image'
         )));
-        //Custom Setting / Custom Text for Custom Image
         $wp_customize->add_setting('pg_custom_bg_txt', array(
             'type' => 'theme_mod'
         ));
         $wp_customize->add_control('pg_custom_bg_txt', array(
-                'label'    => __( 'Custom Image Text', 'Phoenix Gear' ),
-                'section'  => 'short_code_options',
+                'label'    => __( 'Custom Image Tittle', 'Phoenix Gear' ),
+                'section'  => 'pg_quick_sale_section',
                 'settings' => 'pg_custom_bg_txt',
                 'type'     => 'text',
         ));
@@ -120,7 +119,7 @@ Version: 1.0
         ));
         $wp_customize->add_control('pg_custom_bg_txt_area', array(
                 'label'    => __( "Custom's Image Message", 'Phoenix Gear' ),
-                'section'  => 'short_code_options',
+                'section'  => 'pg_quick_sale_section',
                 'settings' => 'pg_custom_bg_txt_area',
                 'type'     => 'textarea',
         ));
@@ -129,18 +128,18 @@ Version: 1.0
             'sanitize_callback'=> 'esc_url_raw'
         ));
         $wp_customize->add_control('pg_custom_bg_link', array(
-            'label'    => __( 'Custom Image custom Link', 'Phoenix Gear' ),
-            'section'  => 'short_code_options',
+            'label'    => __( 'Custom Image Link', 'Phoenix Gear' ),
+            'section'  => 'pg_quick_sale_section',
             'settings' => 'pg_custom_bg_link',
             'type'     => 'text',
         ));
-        //Custom Settings / Links Section First
+        //Custom Settings / Links Section / First
         $wp_customize->add_setting('pg_first_link_img', array(
             'type' => 'theme_mod'
         ));
         $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'pg_first_link_img', array(
             'label' => __( 'First Link Section Image', 'Phoenix Gear' ),
-            'section' => 'short_code_options',
+            'section' => 'pg_links_section',
             'mime_type' => 'image'
         )));
         $wp_customize->add_setting('pg_first_link_txt_area', array(
@@ -148,7 +147,7 @@ Version: 1.0
         ));
         $wp_customize->add_control('pg_first_link_txt_area', array(
                 'label'    => __( "First Link Section Image Message", 'Phoenix Gear' ),
-                'section'  => 'short_code_options',
+                'section'  => 'pg_links_section',
                 'settings' => 'pg_first_link_txt_area',
                 'type'     => 'textarea',
         ));
@@ -158,17 +157,17 @@ Version: 1.0
         ));
         $wp_customize->add_control('pg_link_section_first_link', array(
             'label'    => __( 'First Link Section Image Link', 'Phoenix Gear' ),
-            'section'  => 'short_code_options',
+            'section'  => 'pg_links_section',
             'settings' => 'pg_link_section_first_link',
             'type'     => 'text',
         ));
-        //Custom Settings / Links Section Second
+        //Custom Settings / Links Section / Second
         $wp_customize->add_setting('pg_second_link_img', array(
             'type' => 'theme_mod'
         ));
         $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'pg_second_link_img', array(
             'label' => __( 'Second Link Section Image', 'Phoenix Gear' ),
-            'section' => 'short_code_options',
+            'section' => 'pg_links_section',
             'mime_type' => 'image'
         )));
         $wp_customize->add_setting('pg_second_link_txt_area', array(
@@ -176,7 +175,7 @@ Version: 1.0
         ));
         $wp_customize->add_control('pg_second_link_txt_area', array(
                 'label'    => __( "Second Link Section Image Message", 'Phoenix Gear' ),
-                'section'  => 'short_code_options',
+                'section'  => 'pg_links_section',
                 'settings' => 'pg_second_link_txt_area',
                 'type'     => 'textarea',
         ));
@@ -186,17 +185,17 @@ Version: 1.0
         ));
         $wp_customize->add_control('pg_link_section_second_link', array(
             'label'    => __( 'Second Link Section Image Link', 'Phoenix Gear' ),
-            'section'  => 'short_code_options',
+            'section'  => 'pg_links_section',
             'settings' => 'pg_link_section_second_link',
             'type'     => 'text',
         ));
-        //Custom Settings / Links Section Third
+        //Custom Settings / Links Section / Third
         $wp_customize->add_setting('pg_third_link_img', array(
             'type' => 'theme_mod'
         ));
         $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'pg_third_link_img', array(
             'label' => __( 'Third Link Section Image', 'Phoenix Gear' ),
-            'section' => 'short_code_options',
+            'section' => 'pg_links_section',
             'mime_type' => 'image'
         )));
         $wp_customize->add_setting('pg_third_link_txt_area', array(
@@ -204,7 +203,7 @@ Version: 1.0
         ));
         $wp_customize->add_control('pg_third_link_txt_area', array(
                 'label'    => __( "Third Link Section Image Message", 'Phoenix Gear' ),
-                'section'  => 'short_code_options',
+                'section'  => 'pg_links_section',
                 'settings' => 'pg_third_link_txt_area',
                 'type'     => 'textarea',
         ));
@@ -214,7 +213,7 @@ Version: 1.0
         ));
         $wp_customize->add_control('pg_link_section_third_link', array(
             'label'    => __( 'Third Link Section Image Link', 'Phoenix Gear' ),
-            'section'  => 'short_code_options',
+            'section'  => 'pg_links_section',
             'settings' => 'pg_link_section_third_link',
             'type'     => 'text',
         ));
@@ -224,7 +223,7 @@ Version: 1.0
         ));
         $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'pg_writting_sec_img', array(
             'label' => __( 'Writting Section Image', 'Phoenix Gear' ),
-            'section' => 'short_code_options',
+            'section' => 'pg_write_section_options',
             'mime_type' => 'image'
         )));
         $wp_customize->add_setting('pg_writting_sec_txt_area_first', array(
@@ -232,7 +231,7 @@ Version: 1.0
         ));
         $wp_customize->add_control('pg_writting_sec_txt_area_first', array(
                 'label'    => __( "Writting Section First Message", 'Phoenix Gear' ),
-                'section'  => 'short_code_options',
+                'section'  => 'pg_write_section_options',
                 'settings' => 'pg_writting_sec_txt_area_first',
                 'type'     => 'textarea',
         ));
@@ -242,7 +241,7 @@ Version: 1.0
         ));
         $wp_customize->add_control('pg_writting_sec_btn_link_first', array(
             'label'    => __( 'Writting Section Button Link First', 'Phoenix Gear' ),
-            'section'  => 'short_code_options',
+            'section'  => 'pg_write_section_options',
             'settings' => 'pg_writting_sec_btn_link_first',
             'type'     => 'text',
         ));
@@ -251,7 +250,7 @@ Version: 1.0
         ));
         $wp_customize->add_control('pg_writting_sec_txt_area_second', array(
                 'label'    => __( "Writting Section Second Message", 'Phoenix Gear' ),
-                'section'  => 'short_code_options',
+                'section'  => 'pg_write_section_options',
                 'settings' => 'pg_writting_sec_txt_area_second',
                 'type'     => 'textarea',
         ));
@@ -261,14 +260,105 @@ Version: 1.0
         ));
         $wp_customize->add_control('pg_writting_sec_btn_link_second', array(
             'label'    => __( 'Writting Section Button Link Seccond', 'Phoenix Gear' ),
-            'section'  => 'short_code_options',
+            'section'  => 'pg_write_section_options',
             'settings' => 'pg_writting_sec_btn_link_second',
             'type'     => 'text',
         ));
-        //Custom Setting/ Short Code Options - Section
-        $wp_customize->add_section('short_code_options', array(
-            'title' => __('Short Code Options'),
-            'description' => __('Modifications for Short Codes'),
+        //Custom Settings / Send us your pics. Section
+        $wp_customize->add_setting('pg_send_pic_img_first', array(
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'pg_send_pic_img_first', array(
+            'label' => __( 'Send Pics. Image First', 'Phoenix Gear' ),
+            'section' => 'pg_send_us_pics_options',
+            'mime_type' => 'image'
+        )));
+        $wp_customize->add_setting('pg_send_pic_link_first', array(
+            'type' => 'theme_mod',
+            'sanitize_callback'=> 'esc_url_raw'
+        ));
+        $wp_customize->add_control('pg_send_pic_link_first', array(
+            'label'    => __( 'Send Pics. Link First', 'Phoenix Gear' ),
+            'section'  => 'pg_send_us_pics_options',
+            'settings' => 'pg_send_pic_link_first',
+            'type'     => 'text',
+        ));
+        $wp_customize->add_setting('pg_send_pic_img_second', array(
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'pg_send_pic_img_second', array(
+            'label' => __( 'Send Pics. Image Second', 'Phoenix Gear' ),
+            'section' => 'pg_send_us_pics_options',
+            'mime_type' => 'image'
+        )));
+        $wp_customize->add_setting('pg_send_pic_link_second', array(
+            'type' => 'theme_mod',
+            'sanitize_callback'=> 'esc_url_raw'
+        ));
+        $wp_customize->add_control('pg_send_pic_link_second', array(
+            'label'    => __( 'Send Pics. Link Second', 'Phoenix Gear' ),
+            'section'  => 'pg_send_us_pics_options',
+            'settings' => 'pg_send_pic_link_second',
+            'type'     => 'text',
+        ));
+        $wp_customize->add_setting('pg_send_pic_img_third', array(
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'pg_send_pic_img_third', array(
+            'label' => __( 'Send Pics. Image Third', 'Phoenix Gear' ),
+            'section' => 'pg_send_us_pics_options',
+            'mime_type' => 'image'
+        )));
+        $wp_customize->add_setting('pg_send_pic_link_third', array(
+            'type' => 'theme_mod',
+            'sanitize_callback'=> 'esc_url_raw'
+        ));
+        $wp_customize->add_control('pg_send_pic_link_third', array(
+            'label'    => __( 'Send Pics. Link Third', 'Phoenix Gear' ),
+            'section'  => 'pg_send_us_pics_options',
+            'settings' => 'pg_send_pic_link_third',
+            'type'     => 'text',
+        ));
+        $wp_customize->add_setting('pg_send_pic_img_fourth', array(
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'pg_send_pic_img_fourth', array(
+            'label' => __( 'Send Pics. Image Fourth', 'Phoenix Gear' ),
+            'section' => 'pg_send_us_pics_options',
+            'mime_type' => 'image'
+        )));
+        $wp_customize->add_setting('pg_send_pic_link_fourth', array(
+            'type' => 'theme_mod',
+            'sanitize_callback'=> 'esc_url_raw'
+        ));
+        $wp_customize->add_control('pg_send_pic_link_fourth', array(
+            'label'    => __( 'Send Pics. Link Fourth', 'Phoenix Gear' ),
+            'section'  => 'pg_send_us_pics_options',
+            'settings' => 'pg_send_pic_link_fourth',
+            'type'     => 'text',
+        ));
+        //Custom Section / Quick Sale Customizations
+        $wp_customize->add_section('pg_quick_sale_section', array(
+            'title' => __('Quick Sale Options'),
+            'description' => __('Modifications for Quick Sale Short code: [pg_quick_sale] '),
+            'priority' => 160
+        ));
+        //Custom Section / Links Section Customizations
+        $wp_customize->add_section('pg_links_section', array(
+            'title' => __('Links Section Options'),
+            'description' => __('Modifications for Links Section Short code: [pg_links_sec] '),
+            'priority' => 160
+        ));
+        //Custom Section / Write Section Customizations
+        $wp_customize->add_section('pg_write_section_options', array(
+            'title' => __('Writing Section Options'),
+            'description' => __('Modifications for Writing Section Short code: [pg_writting_sec] '),
+            'priority' => 160
+        ));
+        //Custom Section / Send us your Pics. Customizations
+        $wp_customize->add_section('pg_send_us_pics_options', array(
+            'title' => __('Send Us Pics. Options'),
+            'description' => __('Modifications for Send us your Pics. Short code: [pg_send_us_pics] '),
             'priority' => 160
         ));
     }
@@ -313,13 +403,14 @@ Version: 1.0
             $content .="<style>
                             .pg-quick-sale{
                                 width: 100%;
-                                height: 25vw;
+                                height: auto;
                                 display: flex;
-                                flex-flow: row nowrap;
+                                flex-flow: row wrap;
                                 justify-content: space-around;
                             }
                             .pg-quick-sale .men{
-                                width: 25%;
+                                width: 100%;
+                                height: 80vw;
                                 background: url('".wp_get_attachment_image_url(get_theme_mod('pg_mens_bg_img','Custom'),'medium')."');
                                 background-repeat: no-repeat;
                                 background-size: cover;
@@ -354,7 +445,8 @@ Version: 1.0
                                 bottom: 0;
                             }
                             .pg-quick-sale .women{
-                                width: 25%;
+                                width: 100%;
+                                height: 80vw;
                                 background: url('".wp_get_attachment_image_url(get_theme_mod('pg_womens_bg_img'),'medium')."');
                                 background-repeat: no-repeat;
                                 background-size: cover;
@@ -393,7 +485,8 @@ Version: 1.0
                                 bottom: 0;
                             }
                             .pg-quick-sale .custom{
-                                width: 50%;
+                                width: 100%;
+                                height: 80vw;
                                 background: url('".wp_get_attachment_image_url(get_theme_mod('pg_custom_bg_img'),'large')."');
                                 background-repeat: no-repeat;
                                 background-size: cover;
@@ -426,6 +519,34 @@ Version: 1.0
                                 font-size: .75em;
                                 position: absolute;
                                 bottom: 0;
+                            }
+                            /* Small devices (landscape phones, 576px and up) */
+                            @media (min-width: 576px) {
+                                .pg-quick-sale .men{
+                                    width: 50%;
+                                    height:20em
+                                }
+                                .pg-quick-sale .women{
+                                    width: 50%;
+                                    height: 20em;
+                                }
+                                .pg-quick-sale .custom{
+                                    width: 100%;
+                                    height: 20em;
+                                }
+                            }
+                            /* Medium devices (tablets, 768px and up) */
+                            @media (min-width: 768px) {
+                            }
+                            /* Large devices (desktops, 992px and up) */
+                            @media (min-width: 992px) {
+                                .pg-quick-sale{
+                                    height: 25vw;
+                                    flex-flow: row nowrap;
+                                }
+                            }
+                            /* Extra large devices (large desktops, 1200px and up) */
+                            @media (min-width: 1200px) {
                             }
                         </style>";
             $content .="<script>
@@ -532,6 +653,9 @@ Version: 1.0
         //Featured Products / Short Code
         add_shortcode('pg_feat_prod', 'phoenix_gear_feat_prod_SC');
         function phoenix_gear_feat_prod_SC($atts, $cont = null){
+            if ( \Elementor\Plugin::$instance->preview->is_preview_mode() ) {
+                return $cont;
+            }
             $args = array(
                 'post_type' => 'product',
                 'tax_query' => array(
@@ -545,14 +669,108 @@ Version: 1.0
                 'orderby' => 'publish_date'
             );
             $featuredProd = new WP_Query($args);//Add Featured Products Loop
-            $content = '<div class="pg-feat-prod">
-
-                            <h2>'.$cont.'</h2>
-                        </div>'; 
+            $content = '<div class="pg-feat-prod">';
+            if($featuredProd->have_posts()):
+                for($i = 0; $i < 4; $i++){
+                    $featuredProd->the_post();
+                    $content .= '<a href="'.get_permalink().'" >
+                                    <div>
+                                        <span>'.get_the_title().'</span>'
+                                        .get_the_post_thumbnail(null, 'medium').
+                                    '</div>
+                                </a>';
+                }
+                $content .= '<h2>'.$cont.'</h2>';
+            endif;
+            $content .= '</div>'; 
             $content .="<style>
+                            .pg-feat-prod{
+                                display: flex;
+                                flex-flow: row wrap;
+                                position: relative;
+                            }
+                            .pg-feat-prod a{
+                                width: 50%;
+                                height: auto;
+                                display: block;
+                            }
+                            .pg-feat-prod a>div{
+                                background: rgba(0, 0, 0);
+                            }
+                            .pg-feat-prod a>div img{
+                                width: 100%;
+                                opacity: .55;
+                                transition: opacity .8s ease-in-out;
+                                vertical-align: bottom;
+                            }
+                            .pg-feat-prod span{
+                                width: 50%;
+                                position: absolute;
+                                text-align: center;
+                                font-family: neue-haas-grotesk-display,sans-serif;
+                                font-weight: 200;
+                                font-style: normal;
+                                font-size: 4vw;
+                                color: #FFF;
+                                transition: all .8s ease-in-out ;
+                                z-index: 100;
+                            }
+                            .pg-feat-prod h2{
+                                width: 100%;
+                                position: absolute;
+                                bottom: 0;
+                                font-family: proxima-nova, sans-serif;
+                                font-weight: 700;
+                                font-style: normal;
+                                font-size: 6vw;
+                                color: #FFF;
+                                opacity: .40;
+                                text-align: center;
+                                margin: unset;
+                            }
+                            /* Small devices (landscape phones, 576px and up) */
+                            @media (min-width: 576px) {
+                                
+                            }
+                            /* Medium devices (tablets, 768px and up) */
+                            @media (min-width: 768px) {
+                                
+                            }
+                            /* Large devices (desktops, 992px and up) */
+                            @media (min-width: 992px) {
+                                .pg-feat-prod{
+                                    flex-flow: row nowrap;
+                                }
+                                .pg-feat-prod a{
+                                    width: 25%;
+                                }
+                                .pg-feat-prod a>div{
+                                    height: unset;
+                                }
+                                .pg-feat-prod span{
+                                    width: 25%;
+                                    font-size: 2.5vw;
+                                }
+                            }
+                            }
+                            /* Extra large devices (large desktops, 1200px and up) */
+                            @media (min-width: 1200px) {
+                                .pg-feat-prod span{
+                                    width: 25%;
+                                    font-size: 2vw;
+                                }
+                            }
                         </style>";
             $content .="<script>
                             jQuery(function($){
+                                $('.pg-feat-prod a>div img').mouseover(function(e){
+                                    $(this).css('opacity', '1');
+                                    $(this).parent().children('span').css({'color':'#FFF', 'opacity':'.55'});
+                                });
+                                $('.pg-feat-prod a>div img').mouseleave(function(e){
+                                    $(this).css('opacity', '.55');
+                                    $(this).parent().children('span').css({'color':'#FFF', 'opacity':'1'});
+                                });
                             });
                         </script>";
             //IE Checks
@@ -567,6 +785,9 @@ Version: 1.0
         //Featured Blog Posts / Short Code
         add_shortcode('pg_feat_blog_post', 'phoenix_gear_feat_blog_post_SC');
         function phoenix_gear_feat_blog_post_SC($atts, $cont = null){
+            if ( \Elementor\Plugin::$instance->preview->is_preview_mode() ) {
+                return $cont;
+            }
             $a = shortcode_atts(array(
                 'char' => 140
             ), $atts);
@@ -681,11 +902,11 @@ Version: 1.0
                             .pg-first-link-img{
                                 display: flex;
                                 width: 100%;
-                                height: 35vw;
-                                flex-flow: row nowrap;
+                                height: auto;
+                                flex-flow: row wrap;
                             }
                             .pg-first-link-img .two-left {
-                                width: 55%;
+                                width: 100%;
                                 height: 100%;
                             }
                             .pg-first-link-img .two-left>div>a>div{
@@ -710,7 +931,7 @@ Version: 1.0
                                 background-repeat: no-repeat;
                                 background-size: cover;
                                 width: 100%;
-                                height: 50%;
+                                height: 50vw
                             }
                             .pg-first-link-img .two-left .first h5{
                                 bottom: 0;
@@ -720,7 +941,7 @@ Version: 1.0
                                 background-repeat: no-repeat;
                                 background-size: cover;
                                 width: 100%;
-                                height: 50%;
+                                height: 50vw;
                             }
                             .pg-first-link-img .two-left .second h5{
                                 margin-top: .15em;
@@ -729,7 +950,7 @@ Version: 1.0
                                 background: url(".wp_get_attachment_image_url(get_theme_mod('pg_third_link_img'),'large').");
                                 background-repeat: no-repeat;
                                 background-size: cover;
-                                width: 45%;
+                                width: 100%;
                                 height: 100%;
                             }
                             .pg-first-link-img .one-right a{
@@ -746,13 +967,41 @@ Version: 1.0
                                 font-family: proxima-nova, sans-serif;
                                 font-weight: 700;
                                 font-style: normal;
-                                font-size: 2.5em;
+                                font-size: 2em;
                                 text-align: left;
                                 color: rgba(255,255,255, .45);
                                 transition: color .5s ease-in-out;
                                 margin: unset;
                                 margin-left: 1.5em;
                                 margin-right: 1.5em;
+                            }
+                            /* Small devices (landscape phones, 576px and up) */
+                            @media (min-width: 576px) {
+                                .pg-first-link-img{
+                                    flex-flow: row nowrap;
+                                    height: 35vw;
+                                }
+                                .pg-first-link-img .two-left {
+                                    width: 55%;
+                                }
+                                .pg-first-link-img .two-left .first, .pg-first-link-img .two-left .second{
+                                    height: 50%;
+                                }
+                                .pg-first-link-img .one-right{
+                                    width: 45%;
+                                }
+                            }
+                            /* Medium devices (tablets, 768px and up) */
+                            @media (min-width: 768px) {
+                                .pg-first-link-img .one-right .third h5{
+                                    font-size: 2.5em;
+                                }
+                            }
+                            /* Large devices (desktops, 992px and up) */
+                            @media (min-width: 992px) {
+                            }
+                            /* Extra large devices (large desktops, 1200px and up) */
+                            @media (min-width: 1200px) {
                             }
                         </style>";//Add More Styles Here
             $content .="<script>
@@ -801,24 +1050,24 @@ Version: 1.0
             $content .="<style>
                             .pg-writting-section>div{
                                 display:flex;
-                                flex-flow: column;
+                                flex-flow: column wrap;
                                 width: 100%;
                                 max-width: 80em;
                                 margin: auto;
                             }
                             .pg-writting-section .top, .pg-writting-section .bottom{
                                 display: flex;
-                                flex-flow: row nowrap;
+                                flex-flow: row wrap;
                                 justify-content: space-around;
                                 align-items: center;
                                 align-content: center;
                                 margin-top: 1em;
                             }
                             .pg-writting-section .top img{
-                                width: 15%;
+                                width: 80%;
                             }
                             .pg-writting-section .top p{
-                                width: 45%;
+                                width: 80%;
                                 display: block;
                                 font-family: montserrat, sans-serif;
                                 font-weight: 400;
@@ -852,14 +1101,150 @@ Version: 1.0
                                 padding: .35em;
                                 padding-left: 1.5em;
                                 padding-right: 1.5em;
+                                margin-top: 1em;
+                                margin-bottom: .25em;
                             }
                             .pg-writting-section button:hover{
                                 color: rgba(255, 255, 255, .45);
                                 cursor: pointer;
                             }
+                            /* Small devices (landscape phones, 576px and up) */
+                            @media (min-width: 576px) {
+                                .pg-writting-section .top, .pg-writting-section .bottom{
+                                    flex-flow: row nowrap;
+                                }
+                                .pg-writting-section .top img{
+                                    width: 15%;
+                                }
+                                .pg-writting-section .top p{
+                                    width: 45%;
+                                }
+                                .pg-writting-section button{
+                                    margin-top: unset;
+                                }
+                            }
+                            /* Medium devices (tablets, 768px and up) */
+                            @media (min-width: 768px) {
+                                .pg-writting-section .bottom p{
+                                    margin-left: 1em;
+                                }
+                            }
+                            /* Large devices (desktops, 992px and up) */
+                            @media (min-width: 992px) {
+
+                            }
+                            /* Extra large devices (large desktops, 1200px and up) */
+                            @media (min-width: 1200px) {
+                            }
                         </style>";//Add More Styles Here
             $content .="<script>
                             jQuery(function($){
+                            });
+                        </script>";
+            //IE Checks
+            global $is_IE;
+            if ($is_IE){
+                $content .= "<style>
+                                
+                             </style>";
+            }
+            return $content;
+        }
+        // Send Us Pics / Short Code
+        add_shortcode('pg_send_us_pics', 'phoenix_gear_send_pics_sec_SC');
+        function phoenix_gear_send_pics_sec_SC($atts, $cont = null){
+            $content = '<div class="pg-send-us-pics">
+                            <a href="'.get_theme_mod('pg_send_pic_link_first').'" target="_blank">
+                                <div>'
+                                .wp_get_attachment_image(get_theme_mod('pg_send_pic_img_first'), 'medium').
+                                '</div>
+                            </a>
+                            <a href="'.get_theme_mod('pg_send_pic_link_second').'" target="_blank">
+                                <div>'
+                                .wp_get_attachment_image(get_theme_mod('pg_send_pic_img_second'), 'medium').
+                                '</div>
+                            </a>
+                            <a href="'.get_theme_mod('pg_send_pic_link_third').'" target="_blank">
+                                <div>'
+                                    .wp_get_attachment_image(get_theme_mod('pg_send_pic_img_third'), 'medium').
+                                '</div>
+                            </a>
+                            <a href="'.get_theme_mod('pg_send_pic_link_fourth').'" target="_blank">
+                                <div>'
+                                .wp_get_attachment_image(get_theme_mod('pg_send_pic_img_fourth'), 'medium').
+                                '</div>
+                            </a>
+                            <h2>SEND US PICS OF YOUR GEAR</h2>
+                        </div>';
+            $content .="<style>
+                            .pg-send-us-pics{
+                                display: flex;
+                                flex-flow: row wrap;
+                                position: relative;
+                            }
+                            .pg-send-us-pics a{
+                                display: block;
+                                width: 50%;
+                                height: auto;
+                            }
+                            .pg-send-us-pics a>div{
+                                background: rgba(0, 0, 0,1);
+                            }
+                            .pg-send-us-pics a>div img{
+                                width: 100%;
+                                opacity: .55;
+                                transition: opacity .8s ease-in-out;
+                                vertical-align: bottom;
+                            }
+                            .pg-send-us-pics h2{
+                                width: 100%;
+                                position: absolute;
+                                bottom: 0;
+                                font-family: proxima-nova, sans-serif;
+                                font-weight: 700;
+                                font-style: normal;
+                                font-size: 6.2vw;
+                                color: #FFF;
+                                opacity: .40;
+                                text-align: center;
+                                margin: unset;
+                            }
+                            /* Small devices (landscape phones, 576px and up) */
+                            @media (min-width: 576px) {
+                                .pg-send-us-pics{
+                                    flex-flow: row nowrap;
+                                }
+                                .pg-send-us-pics a{
+                                    width: 25%;
+                                }
+                                .pg-send-us-pics a>div{
+                                    height: unset;
+                                }
+                                .pg-send-us-pics h2{
+                                    font-size: 5vw;
+                                }
+                            }
+                            /* Medium devices (tablets, 768px and up) */
+                            @media (min-width: 768px) {
+                                .pg-send-us-pics h2{
+                                    font-size: 4.2vw;
+                                }
+                            }
+                            /* Large devices (desktops, 992px and up) */
+                            @media (min-width: 992px) {
+                            }
+                            /* Extra large devices (large desktops, 1200px and up) */
+                            @media (min-width: 1200px) {
+                            }
+                        </style>";//Add More Styles Here
+            $content .="<script>
+                            jQuery(function($){
+                                $('.pg-send-us-pics a>div img').mouseover(function(e){
+                                    $(this).css('opacity', '1');
+                                });
+                                $('.pg-send-us-pics a>div img').mouseleave(function(e){
+                                    $(this).css('opacity', '.55');
+                                });
                             });
                         </script>";
             //IE Checks
